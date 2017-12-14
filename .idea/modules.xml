@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RxJavaAndRetrofitTest.iml" filepath="$PROJECT_DIR$/RxJavaAndRetrofitTest.iml" />
+      <module fileurl="file://D:\testGit\RxjavaAndRetrofitTest\RxJavaAndRetrofitTest.iml" filepath="D:\testGit\RxjavaAndRetrofitTest\RxJavaAndRetrofitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RxjavaAndRetrofitTest.iml" filepath="$PROJECT_DIR$/.idea/RxjavaAndRetrofitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\testGit\RxjavaAndRetrofitTest\app\app.iml" filepath="D:\testGit\RxjavaAndRetrofitTest\app\app.iml" />
     </modules>
   </component>
 </project>

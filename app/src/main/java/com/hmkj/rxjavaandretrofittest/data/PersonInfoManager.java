@@ -1,5 +1,6 @@
 package com.hmkj.rxjavaandretrofittest.data;
 
+import com.hmkj.rxjavaandretrofittest.data.model.ClientServiceInfo;
 import com.hmkj.rxjavaandretrofittest.data.model.MineInfo;
 import com.hmkj.rxjavaandretrofittest.data.model.StockCodeInfo;
 import com.hmkj.rxjavaandretrofittest.data.resulthandle.HttpResponseFunc;
@@ -54,7 +55,7 @@ public class PersonInfoManager {
         transform(service.getStockInfo(userId,stockCode),subscriber);
     }
 
-    public void loadClientCenterInfo(String userId,LoadingSubscriber<String> subscriber)
+    public void loadClientCenterInfo(String userId,LoadingSubscriber<ClientServiceInfo> subscriber)
     {
         DataService service = RetrofitManager.getInstance().getRetrofitClient().create(DataService.class);
         transform(service.getClientCenterInfo(userId),subscriber);

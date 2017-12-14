@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.hmkj.rxjavaandretrofittest.data.PersonInfoManager;
+import com.hmkj.rxjavaandretrofittest.data.model.ClientServiceInfo;
 import com.hmkj.rxjavaandretrofittest.data.model.MineInfo;
 import com.hmkj.rxjavaandretrofittest.data.model.StockCodeInfo;
 import com.hmkj.rxjavaandretrofittest.data.resulthandle.ApiException;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity
     private Button stockButton;
     private LoadingSubscriber<MineInfo> mSubscriber;
     private LoadingSubscriber<StockCodeInfo> mStockSubscriber;
-    private LoadingSubscriber<String> mClientCenterSubscriber;
+    private LoadingSubscriber<ClientServiceInfo> mClientCenterSubscriber;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -107,15 +108,16 @@ public class MainActivity extends AppCompatActivity
     private void loadClientCenterInfo()
     {
         String userId = "7";
-        mClientCenterSubscriber = new LoadingSubscriber<>(MainActivity.this, new LoadingSubscriber.OnResultListener<String>() {
+        mClientCenterSubscriber = new LoadingSubscriber<>(MainActivity.this, new LoadingSubscriber.OnResultListener<ClientServiceInfo>() {
             @Override
-            public void onNext(String s) {
-                Log.e("result",s);
+            public void onNext(ClientServiceInfo clientServiceInfo) {
+                Log.e("result_tag",clientServiceInfo.getPhone());
+                Log.e("result_tag",clientServiceInfo.getClientQuestionInfos().size()+"");
             }
 
             @Override
             public void onError(ApiException e) {
-                Log.e("result",e.message + e.code);
+
             }
         });
 

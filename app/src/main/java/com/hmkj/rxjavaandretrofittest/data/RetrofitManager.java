@@ -18,7 +18,7 @@ public class RetrofitManager {
 
     private static Retrofit mRetrofit;
 
-    private static final String URL = "http://api.51clj.com";
+    private static final String URL = "http://cljpeizi.tunnel.echomod.cn";
 
     private RetrofitManager()
     {

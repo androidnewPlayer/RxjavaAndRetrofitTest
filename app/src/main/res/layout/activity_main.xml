@@ -20,6 +20,19 @@
         android:layout_marginTop="20dp"
         android:text="获取stock" />
 
+    <Button
+        android:id="@+id/bt_image"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="uplaod FILE IMAGE" />
+
+    <ImageView
+        android:id="@+id/iv_test"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"/>
+
     <ProgressBar
         android:id="@+id/pb_waiting"
         android:layout_width="wrap_content"

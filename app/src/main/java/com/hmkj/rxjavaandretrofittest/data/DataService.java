@@ -5,9 +5,14 @@ import com.hmkj.rxjavaandretrofittest.data.model.MineInfo;
 import com.hmkj.rxjavaandretrofittest.data.model.StockCodeInfo;
 import com.hmkj.rxjavaandretrofittest.data.resulthandle.HttpResult;
 
+import org.json.JSONObject;
+
+import okhttp3.MultipartBody;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import rx.Observable;
 
 /**
@@ -31,4 +36,8 @@ public interface DataService
     @FormUrlEncoded
     @POST("app/open/discover/helpCenter")
     Observable<HttpResult<ClientServiceInfo>> getClientCenterInfo(@Field("userId") String userId);
+
+    @Multipart
+    @POST("app/member/account/doUploadPic")
+    Observable<HttpResult<JSONObject>> upLoadImageFile(@Part MultipartBody.Part userIdPart,@Part MultipartBody.Part filePart);
 }
